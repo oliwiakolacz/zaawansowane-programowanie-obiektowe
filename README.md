@@ -34,7 +34,7 @@ dotnet run
 | 6 | Polimorfizm | W projekcie wykorzystano wiele miechanizmów opartych na polimorfizmie m.in metodę wirtualną `virtual decimal Cena()` w klasie abstrakcyjnej `EscapeRoom.cs`, którą nadpisujemy `override` w klasach pochodnych. Uzyto rowniez interfejsu, jak i przeciazania operatorow.|
 | 7 | Interfejsy / Abstrakcja | Interfejs `IRezerwacja.cs`, którego implementuje abstrakcyjna klasa `EscapeRoom.cs`.|
 |   |                         | Abstrakcyjna klasa `EscapeRoom.cs`, która posiada m.in. wirtualna metode `public virtual decimal Cena() => 200m;` z wartością domyślną. Przez uzycie modyfikatora `virtual` klasy dziedziczące mogą nadpisać tą metodę, ale nie muszą. |
-| 8 | Typy ogólne / Kolekcje | Klasa `Repozytorium.cs` jest generyczna (`public class Repozytorium<T> where T : class`) tj. potrzebuje zdefiniowania typu przez powołaniem jej obiektów. Zapis `where T : class` ogranicza mozliwe typy do klas, interfejsów, delegatów i typów referencyjnych. Przykład uzycia: `var repo = new Repozytorium<Rezerwacja>();`  + `List<T>` w środku |
+| 8 | Typy ogólne / Kolekcje | Klasa `Repozytorium.cs` jest generyczna (`public class Repozytorium<T> where T : class`) tj. potrzebuje zdefiniowania typu przy powołaniu jej obiektów. Zapis `where T : class` ogranicza mozliwe typy do klas, interfejsów, delegatów i typów referencyjnych. Przykład uzycia: `var repo = new Repozytorium<Rezerwacja>();` |
 |   |                        | Klasa `Repozytorium.cs` posiada kolekcję, listę `List<T>`.|
 | 9 | Delegacje / Zdarzenia | Zdarzenia `public event Action<T>? Dodano;` oraz `public event Action<T>? Usunieto;` uzyto w klasie `Repozytorium.cs`. |
 |    |                      | Uzyto delegacji `Func<T, bool>` w metodzie `Usun` w klasie `Repozytorium.cs`. |
