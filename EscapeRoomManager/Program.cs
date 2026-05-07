@@ -33,6 +33,12 @@ repo.Dodaj(rezerwacja2);
 
 Console.WriteLine("\n------------------------------");
 
+// Indeksator, dostęp do elementów repozytorium jak do tablicy
+Console.WriteLine($"Pierwsza rezerwacja w repo (repo[0]): {repo[0].Id}");
+Console.WriteLine($"Druga rezerwacja w repo (repo[1]): {repo[1].Id}");
+
+Console.WriteLine("\n------------------------------");
+
 // Wypisanie wartosci statycznego pola - licznik rezerwacji
 Console.WriteLine($"Liczba rezerwacji: {Rezerwacja.LiczbaWszystkich}");
 
